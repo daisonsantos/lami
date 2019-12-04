@@ -26,14 +26,14 @@
 			<tr>
 				<td>${l.nome}</td>
 				<td>${l.bloco.nome}</td>
-				<td><a href='./LamiForm?id=${l.id}'><button type="button">Editar</button></a></td>
+				<td><a href='./lamiForm?id=${l.id}'><button type="button">Editar</button></a></td>
 				<td><a href='./LamiExcluir?id=${l.id}'><button type="button">Excluir</button></a></td>
 			</tr>
 			</c:forEach>
 		</tbody>
 
 	</table><br><br>
-	<a href="./LamiForm" ><button type="button">Registrar Novo Lami</button></a><br><br>
+	<a href="./lamiForm" ><button type="button">Registrar Novo Lami</button></a><br><br>
 	<div align="right"><br><br>
 	<a href="./Painel"><button type="button">Voltar</button></a><br><br>
 	</div>

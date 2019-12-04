@@ -13,6 +13,7 @@
 	scope="application" />
 </head>
 <body>
+
 	<div align="center">
 		<div>
 			<h1 style="Text-align: center,">Sistema de Controle de Lamis</h1>
@@ -24,7 +25,7 @@
 					<button type="submit">Entrar</button><br><br>
 					
 				</form>
-<a href="./consultaLami"><button type="submit">Clique aqui para consultar lamis</button></a><br>
+<a href="./ReservaLista"><button type="submit">Clique aqui para consultar lamis</button></a><br>
 			</fieldset>
 		</div>
 	</div>

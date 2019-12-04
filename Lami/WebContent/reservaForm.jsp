@@ -18,7 +18,7 @@
 	<br>
 		<input type="hidden" name="idUsuario" value="${usuario.id}">
 		Selecione o Lami:
-		<select name="laboratorio">
+		<select name="lami">
 			<option>Selecione</option>
 			<c:forEach var="lami" items="${lamis }">
 				<option value="${lami.id}">${lami.nome}</option>

@@ -30,7 +30,7 @@
 		<tbody>
 			<c:forEach var="r" items="${reservas}">
 				<tr>
-					<td>${r.laboratorio.nome}</td>
+					<td>${r.lami.nome}</td>
 					<td>${r.horaInicio}</td>
 					<td>${r.horaFinal}</td>
 					<td>${r.objetivo} </td>

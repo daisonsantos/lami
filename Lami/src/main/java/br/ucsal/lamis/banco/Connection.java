@@ -13,7 +13,7 @@ public class Connection {
 	private static java.sql.Connection connection  = null;
 
 
-	private String conStr = "jdbc:hsqldb:hsql://localhost/loja";
+	private String conStr = "jdbc:hsqldb:hsql://localhost/lami";
 	private String usuario = "sa";
 	private String senha = "";
 	
@@ -31,8 +31,7 @@ public class Connection {
 					
 					+ ");");
 
-			//Criar a tabela usuario
-			//Criar a tabela papel
+		
 		} catch (SQLException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}

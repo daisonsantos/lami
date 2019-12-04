@@ -200,4 +200,9 @@ public class Repositorio {
 		}
 	}
 
+	public Object getconsultas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

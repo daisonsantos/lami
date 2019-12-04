@@ -22,16 +22,13 @@ public class LamiSalvarServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//<input type="hidden" name="id" > 
+		
 		String sId = request.getParameter("id");
 
-		//<input type="text" name="nome" > 
 		String nome = request.getParameter("nome");
 		
-		//<input type="text" name="descricao" >	
 		String descricao = request.getParameter("descricao");
 		
-		// <select name="bloco">
 		String sIdBloco = request.getParameter("bloco");
 
 		Repositorio repositorio = (Repositorio) request.getSession().getServletContext().getAttribute("repositorio");

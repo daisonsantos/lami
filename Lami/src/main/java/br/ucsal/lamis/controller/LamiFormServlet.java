@@ -11,7 +11,7 @@ import br.ucsal.lamis.model.Lami;
 import br.ucsal.lamis.util.Repositorio;
 
 /**
- * Servlet implementation class LaboratorioForm
+ * Servlet implementation class lamiForm
  */
 @WebServlet("/lamiForm")
 public class LamiFormServlet extends HttpServlet {

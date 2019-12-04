@@ -12,7 +12,7 @@ import br.ucsal.lamis.util.Repositorio;
 /**
  * Servlet implementation class LaboratorioExcluirServlet
  */
-@WebServlet("/LaboratorioExcluir")
+@WebServlet("/LamiExcluir")
 public class LamiExcluirServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

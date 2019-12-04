@@ -28,7 +28,7 @@
 		</select><br>
 <br><br>
 		<button type="submit">Salvar</button>
-		<a href="./Lamilista"><button type="button">Voltar</button></a><br><br>
+		<a href="./lamiLista"><button type="button">Voltar</button></a><br><br>
 		
 	</form>
 
