@@ -4,6 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+body{
+  background: url(C:/Users/100923376/git/lami/Lami/WebContent/login.jpg) no-repeat;
+  background-size: 1000px 1000px;
+}
+</style>
 <meta charset="UTF-8">
 <title>Novo Lami </title>
 </head>
@@ -12,7 +18,6 @@
 		<div>
 			<h1 style="Text-align: center,">Sistema de Controle de Lamis</h1>
 			<br>
-			<fieldset>
 	<form action="./LamiSalvar" method="post">
 		<input name="id" type="hidden" value="${lami.id}"> <br><br>
 		Nome: <input
@@ -27,12 +32,12 @@
 
 		</select><br>
 <br><br>
-		<button type="submit">Salvar</button>
+		<button type="submit">Salvar</button><br><br>
+		<div align="right"><br><br>
 		<a href="./lamiLista"><button type="button">Voltar</button></a><br><br>
 		
 	</form>
 
-			</fieldset>
 		</div>
 	</div>
 </body>

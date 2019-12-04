@@ -4,6 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+body{
+  background: url(C:/Users/100923376/git/lami/Lami/WebContent/login.jpg) no-repeat;
+  background-size: 1000px 1000px;
+}
+</style>
 <meta charset="UTF-8">
 <title>Lista Lamis</title>
 </head>
@@ -13,7 +19,6 @@
 			<h1 style="Text-align: center,">Sistema de Controle de Lamis</h1>
 			
 			<br>
-			<fieldset>
 	<table border="1">
 		<thead>
 			<tr>
@@ -39,7 +44,6 @@
 	</div>
 	
 	
-	</fieldset>
 		</div>
 	</div>
 </body>
