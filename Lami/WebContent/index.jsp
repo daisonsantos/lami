@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Laboratorios</title>
+<title>Lamis</title>
 <jsp:useBean id="repositorio" class="br.ucsal.lamis.util.Repositorio"
 	scope="application" />
 </head>

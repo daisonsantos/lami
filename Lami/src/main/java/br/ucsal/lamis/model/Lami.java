@@ -1,6 +1,6 @@
 package br.ucsal.lamis.model;
 
-public class Laboratorio {
+public class Lami {
 	
 	private Integer id;
 	

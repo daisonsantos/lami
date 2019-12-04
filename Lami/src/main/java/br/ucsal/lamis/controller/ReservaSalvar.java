@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.lamis.model.Laboratorio;
+import br.ucsal.lamis.model.Lami;
 import br.ucsal.lamis.model.Reserva;
 import br.ucsal.lamis.model.Usuario;
 import br.ucsal.lamis.util.Repositorio;
@@ -33,7 +33,7 @@ public class ReservaSalvar extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Repositorio repositorio = (Repositorio) request.getSession().getServletContext().getAttribute("repositorio");
 		
-		String idLami= request.getParameter("laboratorio");
+		String idLami= request.getParameter("lami");
 		String idUser= request.getParameter("idUsuario");
 		String objetivo = request.getParameter("objetivo");
 		String descricao = request.getParameter("descricao");
@@ -43,10 +43,10 @@ public class ReservaSalvar extends HttpServlet {
 		
 		
 		Reserva reserva = new Reserva();
-		Laboratorio l = repositorio.obterLaboratorio(Integer.parseInt(idLami));
+		Lami l = repositorio.obterLami(Integer.parseInt(idLami));
 		Usuario u = repositorio.obterUsuario(Integer.parseInt(idUser));
 			
-		reserva.setLaboratorio(l);
+		reserva.setLami(l);
 		reserva.setUsuario(u);
 		reserva.setDescricao(descricao);
 		reserva.setObjetivo(objetivo);
@@ -57,7 +57,7 @@ public class ReservaSalvar extends HttpServlet {
 			repositorio.inserirReserva(reserva);
 			response.sendRedirect("./ReservaLista");
 		}else {
-			request.setAttribute("erro", "Laboratorio Indisponivel");
+			request.setAttribute("erro", "Lami Indisponivel");
 			request.getRequestDispatcher("./reservaForm.jsp").forward(request, response);
 		}
 		
@@ -68,7 +68,7 @@ public class ReservaSalvar extends HttpServlet {
 		LocalTime inicio=reserva.getHoraInicio();
 		LocalTime fim=reserva.getHoraFinal();
 		for (Reserva r : repositorio.getReservas()) {
-			if(r.getLaboratorio().getNome().equals(reserva.getLaboratorio().getNome())
+			if(r.getLami().getNome().equals(reserva.getLami().getNome())
 					&& r.getData().equals(reserva.getData()) ) {
 				
 				if(inicio.isAfter(r.getHoraInicio()) && inicio.isBefore(r.getHoraFinal()) ||

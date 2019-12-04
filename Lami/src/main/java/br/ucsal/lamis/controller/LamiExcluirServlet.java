@@ -10,20 +10,27 @@ import javax.servlet.http.HttpServletResponse;
 import br.ucsal.lamis.util.Repositorio;
 
 /**
- * Servlet implementation class LaboratorioListaServlet
+ * Servlet implementation class LaboratorioExcluirServlet
  */
-@WebServlet("/LaboratorioLista")
-public class LaboratorioListaServlet extends HttpServlet {
+@WebServlet("/LaboratorioExcluir")
+public class LamiExcluirServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Repositorio repositorio = (Repositorio) request.getSession().getServletContext().getAttribute("repositorio");
-		request.setAttribute("laboratorios", repositorio.getLaboratorios());
-		request.getRequestDispatcher("laboratoriolista.jsp").forward(request, response);
+
+		String sId = request.getParameter("id");
+		repositorio.removerLami(Integer.parseInt(sId));
+		
+		response.sendRedirect("./lamiLista");
+
 	}
+
+
 
 }

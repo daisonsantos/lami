@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Lista Laboratorios</title>
+<title>Lista Lamis</title>
 </head>
 <body>
 <div align="center">
@@ -22,18 +22,18 @@
 				<th>editar/excluir</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="l" items="${laboratorios}">
+			<c:forEach var="l" items="${lamis}">
 			<tr>
 				<td>${l.nome}</td>
 				<td>${l.bloco.nome}</td>
-				<td><a href='./LaboratorioForm?id=${l.id}'><button type="button">Editar</button></a></td>
-				<td><a href='./LaboratorioExcluir?id=${l.id}'><button type="button">Excluir</button></a></td>
+				<td><a href='./LamiForm?id=${l.id}'><button type="button">Editar</button></a></td>
+				<td><a href='./LamiExcluir?id=${l.id}'><button type="button">Excluir</button></a></td>
 			</tr>
 			</c:forEach>
 		</tbody>
 
 	</table><br><br>
-	<a href="./LaboratorioForm" ><button type="button">Registrar Novo Lami</button></a><br><br>
+	<a href="./LamiForm" ><button type="button">Registrar Novo Lami</button></a><br><br>
 	<div align="right"><br><br>
 	<a href="./Painel"><button type="button">Voltar</button></a><br><br>
 	</div>

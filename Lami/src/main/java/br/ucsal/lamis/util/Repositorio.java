@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.ucsal.lamis.model.Bloco;
-import br.ucsal.lamis.model.Laboratorio;
+import br.ucsal.lamis.model.Lami;
 import br.ucsal.lamis.model.Reserva;
 import br.ucsal.lamis.model.Usuario;
 
 public class Repositorio {
 	
-	private List<Laboratorio> laboratorios = new ArrayList<Laboratorio>();  
+	private List<Lami> lamis = new ArrayList<Lami>();  
 	
 	private List<Usuario> usuarios = new ArrayList<Usuario>();
 	
@@ -42,8 +42,8 @@ public class Repositorio {
 				
 	}
 
-	public List<Laboratorio> getLaboratorios() {
-		return laboratorios;
+	public List<Lami> getLami() {
+		return lamis;
 	}
 
 	public List<Usuario> getUsuarios() {
@@ -122,58 +122,58 @@ public class Repositorio {
 		return retorno;
 	}
 
-	public Laboratorio obterLaboratorio(Integer id) {
-		Laboratorio laboratorio = null;
-		for (Laboratorio item : laboratorios) {
+	public Lami obterLami(Integer id) {
+		Lami lami = null;
+		for (Lami item : lamis) {
 			if(item.getId()== id) {
-				laboratorio = item;
+				lami = item;
 			}
 		}
-		return laboratorio;
+		return lami;
 	}
 
-	public void salvarLaboratorio(Laboratorio laboratorio) {
-		if(laboratorio.getId() != null && laboratorio.getId() != 0) {
-			alterarLaboratorio(laboratorio);
+	public void salvarLami(Lami lami) {
+		if(lami.getId() != null && lami.getId() != 0) {
+			alterarLami(lami);
 		}else {
-			inserirLaboratorio(laboratorio);
+			inserirLami(lami);
 		}
 	}
 	
-	public void alterarLaboratorio(Laboratorio laboratorio) {
-		Laboratorio update = null;
-		for (Laboratorio item : laboratorios) {
-			if(item.getId() == laboratorio.getId()) {
+	public void alterarLami(Lami lami) {
+		Lami update = null;
+		for (Lami item : lamis) {
+			if(item.getId() == lami.getId()) {
 				update = item;
 			}
 		}
 		if(update != null) {
-			update.setNome(laboratorio.getNome());
-			update.setDescricao(laboratorio.getDescricao());
-			update.setBloco(laboratorio.getBloco());
+			update.setNome(lami.getNome());
+			update.setDescricao(lami.getDescricao());
+			update.setBloco(lami.getBloco());
 		}
 	}
 
-	public void inserirLaboratorio(Laboratorio laboratorio) {
-		Laboratorio ultimo = null;
-		if(laboratorios.isEmpty()) {
-			laboratorio.setId(1);
+	public void inserirLami(Lami lami) {
+		Lami ultimo = null;
+		if(lamis.isEmpty()) {
+			lami.setId(1);
 		} else {
-			ultimo = laboratorios.get( this.laboratorios.size()-1);
-			laboratorio.setId(ultimo.getId()+1);
+			ultimo = lamis.get( this.lamis.size()-1);
+			lami.setId(ultimo.getId()+1);
 		}
-		this.laboratorios.add(laboratorio);
+		this.lamis.add(lami);
 	}
 
-	public void removerLaboratorio(Integer id) {
-		Laboratorio laboratorio = null;
-		for (Laboratorio item : laboratorios) {
+	public void removerLami(Integer id) {
+		Lami lami = null;
+		for (Lami item : lamis) {
 			if(item.getId()== id) {
-				laboratorio = item;
+				lami = item;
 			}
 		}
-		if(laboratorio != null) {
-			this.laboratorios.remove(laboratorio);
+		if(lami != null) {
+			this.lamis.remove(lami);
 		}
 	}
 	

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.lamis.model.Usuario;
+// import br.ucsal.lamis.model.Usuario;
 import br.ucsal.lamis.util.Repositorio;
 
 /**
@@ -25,8 +25,8 @@ public class ReservaForm extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Repositorio repositorio = (Repositorio) request.getSession().getServletContext().getAttribute("repositorio");
-		request.setAttribute("lamis", repositorio.getLaboratorios());
-		request.setAttribute("lamis", repositorio.getLaboratorios());
+		request.setAttribute("lamis", repositorio.getLami());
+		request.setAttribute("lamis", repositorio.getLami());
 		request.getRequestDispatcher("reservaForm.jsp").forward(request, response);
 	}
 

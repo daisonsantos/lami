@@ -17,7 +17,7 @@ public class Reserva {
 	
 	private LocalTime horaFinal;
 	
-	private Laboratorio laboratorio;
+	private Lami lami;
 	
 	private Usuario usuario;
 	
@@ -71,12 +71,12 @@ public class Reserva {
 		this.horaFinal = horaFinal;
 	}
 
-	public Laboratorio getLaboratorio() {
-		return laboratorio;
+	public Lami getLami() {
+		return lami;
 	}
 
-	public void setLaboratorio(Laboratorio laboratorio) {
-		this.laboratorio = laboratorio;
+	public void setLami(Lami lami) {
+		this.lami = lami;
 	}
 
 	public Usuario getUsuario() {

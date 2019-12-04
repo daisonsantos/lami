@@ -7,14 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.lamis.model.Laboratorio;
+import br.ucsal.lamis.model.Lami;
 import br.ucsal.lamis.util.Repositorio;
 
 /**
  * Servlet implementation class LaboratorioSalvarServlet
  */
-@WebServlet("/LaboratorioSalvar")
-public class LaboratorioSalvarServlet extends HttpServlet {
+@WebServlet("/LamiSalvar")
+public class LamiSalvarServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
@@ -36,18 +36,18 @@ public class LaboratorioSalvarServlet extends HttpServlet {
 
 		Repositorio repositorio = (Repositorio) request.getSession().getServletContext().getAttribute("repositorio");
 
-		Laboratorio laboratorio = null;
+		Lami lami = null;
 		if(sId != null && !sId.trim().isEmpty() ) {
-			laboratorio = repositorio.obterLaboratorio(Integer.parseInt(sId));
+			lami = repositorio.obterLami(Integer.parseInt(sId));
 		}else {
-			laboratorio = new Laboratorio();
+			lami = new Lami();
 		}
-		laboratorio.setNome(nome);
-		laboratorio.setDescricao(descricao);
-		laboratorio.setBloco(repositorio.obterBloco(Integer.parseInt(sIdBloco)));
-		repositorio.salvarLaboratorio(laboratorio);
+		lami.setNome(nome);
+		lami.setDescricao(descricao);
+		lami.setBloco(repositorio.obterBloco(Integer.parseInt(sIdBloco)));
+		repositorio.salvarLami(lami);
 		
-		response.sendRedirect("./LaboratorioLista");
+		response.sendRedirect("./lamiLista");
 		
 	}
 
